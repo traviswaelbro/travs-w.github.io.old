@@ -1,0 +1,191 @@
+@font-face {
+	font-family: "Code Free";
+	src: url("../fonts/CODE-Light.otf");
+}
+
+@font-face {
+	font-family: "Code Free Bold";
+	src: url("../fonts/CODE-Bold.otf");
+}
+
+@font-face {
+	font-family: "Pier";
+	src: url("../fonts/pier.otf");
+}
+
+@font-face {
+	font-family: "Spartan";
+	src: url("../fonts/LeagueSpartan-Bold.otf");
+}
+
+html, body {
+	height: 95%;
+	margin :0;
+	padding :0;
+	position: relative;
+}
+
+section {
+	display: table;
+	table-layout: fixed;
+
+	margin: 0;
+	padding: 0;
+
+	height: 100%;
+	width: 100%;
+}
+
+img {
+	max-width: 100%;
+}
+
+h1 {
+	font-family: "Pier";
+  font-size: 5em;
+  text-transform: uppercase;
+}
+
+h2 {
+	font-family: "Code Free Bold";
+	font-size: 2em;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+.black {
+	color: black;
+	opacity: 0.9;
+}
+
+.black-secondary {
+	color: black;
+	opacity: 0.54;
+}
+
+.black-hint {
+	color: black;
+	opacity: 0.38;
+}
+
+.white,
+nav > ul > li > a {
+	color: white;
+	opacity: 1;
+}
+
+.white-secondary {
+	color: white;
+	opacity: 0.70;
+}
+
+.white-divider {
+	color: white;
+	opacity: 0.12;
+}
+
+.valign-parent {
+	display: table;
+}
+
+.valign-child {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.btn-contact {
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+
+  font-size: 1.25em;
+  font-family: "Pier";
+  
+  margin: 0 0.25em;
+  padding: 14px 16px 13px 16px;
+
+  background-color: rgb(51,51,51);
+  background-color: rgba(51,51,51,0.75);
+  border: 1px solid #FFF;
+  
+  text-decoration: none;
+  transition: all 0.5s;
+}
+.btn-contact:hover, .btn-contact:active 
+{
+  border-color: #000;
+  background-color: rgb(255,255,255);
+  background-color: rgba(255,255,255,0.75);
+  color: #000;
+}
+
+.container {
+	margin: 0 auto;
+	position: relative;
+	width: 1240px;
+}
+
+#top {
+	background: url('../images/city.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  opacity: 0.8;
+}
+
+nav {
+	background-color: rgb(51,51,51);
+	background-color: rgba(51,51,51,0.75);
+	text-align: right;
+	transition: 0.5s ease;
+	width: 40%;
+}
+
+nav ul > li {
+	list-style-type: none;
+	margin: 0 2em;
+	padding: 10px;
+	transition: 0.5s ease;
+}
+
+nav > ul > li > a {
+	font-family: "Code Free";
+	font-size: 1.5em;
+	text-decoration: none;
+	transition: 0.5s ease;
+}
+
+.nav-fixed {
+	display: table;
+	height: 100%;
+	margin: 0;
+	position: fixed;
+	transition: 0.5s ease;
+	width: 15%;
+}
+
+.nav-fixed ul {
+	display: table-cell;
+	height: 100%;
+	margin: 0;
+	transition: 0.5s ease;
+	vertical-align: middle;
+}
+
+.billboard {
+	width: 60%;
+}
+
+.billboard > div {
+	margin: 2em;
+}
+
+.billboard > div > h1 {
+	line-height: 1;
+  margin: 0.5em 0;
+}
+
+.left {display:inline-block; width: 35%;}
+.middle {display:inline-block; width: 25%;}
+.right {display:inline-block; width: 40%;}
