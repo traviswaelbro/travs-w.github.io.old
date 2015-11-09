@@ -1,4 +1,17 @@
 /**
+ * Loading Icon
+ */
+if(window.addEventListener) {
+  window.addEventListener("load", loadIcon, false);
+} else if(window.attachEvent) {
+  window.attachEvent("onload", loadIcon);
+}
+
+function loadIcon() {
+	document.getElementById("se-pre-con").style.opacity = 0;
+}
+
+/**
  * After position is more than halfway down the top div, 
  * the nav will animate to left-fixed. Reverts after 
  * returning towards the top of the page.

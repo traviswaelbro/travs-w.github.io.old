@@ -415,6 +415,25 @@ textarea:focus ~ label, textarea:valid ~ label {
 }
 
 /**
+ * Loading Icon
+ */
+/* This only works with JavaScript, 
+if it's not present, don't show loader */
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+	transition: 0.5s ease;
+	position: fixed;
+	left: 0;
+	opacity: 1;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url(../images/preloader.gif) center no-repeat #fff;
+}
+
+/**
  * Media Queries
  */
 @media(max-width: 1100px) {
