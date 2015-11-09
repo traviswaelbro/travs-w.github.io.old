@@ -9,6 +9,7 @@ if(window.addEventListener) {
 
 function loadIcon() {
 	document.getElementById("se-pre-con").style.opacity = 0;
+	document.getElementById("se-pre-con").style.display = "none";
 }
 
 /**
