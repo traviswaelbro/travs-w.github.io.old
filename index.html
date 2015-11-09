@@ -2,44 +2,50 @@
 <html>
 <head>
 	<title>Welcome! | Travis Waelbroeck</title>
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel='stylesheet' type='text/css' href='css/styles.css'>
+	<style type='text/css'>
+		/* Pre-loader: This only works with JavaScript;if it's not present, don't show loader */
+		.no-js #loader { display: none;  }
+		.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+		#se-pre-con {	transition: 0.5s ease;opacity: 1;position: fixed;left: 0;top: 0;height: 100%;width: 100%;z-index: 9999;			background: url('../images/preloader.gif') center no-repeat #fff; }
+	</style>
 </head>
 <body>
-	<div id="se-pre-con"></div>
+	<div id='se-pre-con'></div>
 
-	<section id="top">
-		<nav id="nav" class="valign-child">
+	<section id='top'>
+		<nav id='nav' class='valign-child'>
 			<ul>
-				<li onclick="smoothScrollTo(document.getElementById('top').offsetTop)"><a href="#top">Home</a></li>
-				<li onclick="smoothScrollTo(document.getElementById('about').offsetTop)"><a href="#about">About</a></li>
-				<li onclick="smoothScrollTo(document.getElementById('portfolio').offsetTop)"><a href="#portfolio">Portfolio</a></li>
-				<li onclick="smoothScrollTo(document.getElementById('blog').offsetTop)"><a href="#blog">Blog</a></li>
-				<li onclick="smoothScrollTo(document.getElementById('contact').offsetTop)"><a href="#contact">Contact</a></li>
+				<li onclick='smoothScrollTo(document.getElementById('top').offsetTop)'><a href='#top'>Home</a></li>
+				<li onclick='smoothScrollTo(document.getElementById('about').offsetTop)'><a href='#about'>About</a></li>
+				<li onclick='smoothScrollTo(document.getElementById('portfolio').offsetTop)'><a href='#portfolio'>Portfolio</a></li>
+				<li onclick='smoothScrollTo(document.getElementById('blog').offsetTop)'><a href='#blog'>Blog</a></li>
+				<li onclick='smoothScrollTo(document.getElementById('contact').offsetTop)'><a href='#contact'>Contact</a></li>
 			</ul>
 		</nav>
-		<div class="billboard valign-child">
-			<div class="">
-				<h1 class="black">Travis <br/><span>Waelbroeck</span></h1>
-				<div onclick="smoothScrollTo(document.getElementById('contact').offsetTop)">
-					<a href="#contact" class="btn btn-contact white" onclick="event.preventDefault();">Get In Touch</a>
+		<div class='billboard valign-child'>
+			<div class=''>
+				<h1 class='black'>Travis <br/><span>Waelbroeck</span></h1>
+				<div onclick='smoothScrollTo(document.getElementById('contact').offsetTop)'>
+					<a href='#contact' class='btn btn-contact white' onclick='event.preventDefault();'>Get In Touch</a>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section id="about">
-		<div class="container">
+	<section id='about'>
+		<div class='container'>
 			<h2>About</h2>
-			<div class="left">
-				<img src="images/travis.jpg">
-				<p class="quote">Our only limitations are the ones we put on ourselves.</p>
+			<div class='left'>
+				<img src='images/travis.jpg'>
+				<p class='quote'>Our only limitations are the ones we put on ourselves.</p>
 			</div>
-			<div class="middle">
+			<div class='middle'>
 				<h4>Hi, my name is Travis Waelbroeck. I do more than build websites.</h4>
 				<h4>I learn about your business and what you need, then I develop a solution that solves your problems.</h4>
 			</div>
-			<div class="right">
-				<ul class="skills">
+			<div class='right'>
+				<ul class='skills'>
 					<li>HTML: Building a strong foundation</li>
 					<li>CSS: Designing for your audience</li>
 					<li>JavaScript: Improving functionality and design</li>
@@ -50,10 +56,10 @@
 		</div>
 	</section>
 
-	<section id="portfolio">
-		<div class="container">
+	<section id='portfolio'>
+		<div class='container'>
 			<h2>Portfolio</h2>
-			<ul class="portfolio">
+			<ul class='portfolio'>
 				<li>Example 1</li>
 				<li>Example 2</li>
 				<li>Example 3</li>
@@ -61,71 +67,71 @@
 		</div>
 	</section>
 
-	<section id="subscribe">
-		<div class="container">
+	<section id='subscribe'>
+		<div class='container'>
 			<h2>Be one of the first to get the best - Subscribe!</h2>
-			<div class="group">
-				<input type="text" name="email" required>
-				<span class="highlight"></span>
-				<span class="bar"></span>
+			<div class='group'>
+				<input type='text' name='email' required>
+				<span class='highlight'></span>
+				<span class='bar'></span>
 				<label>your email</label>
 			</div>
-			<div class="group">
-				<input type="submit" value="Sign Up Now" class="btn btn-submit">
+			<div class='group'>
+				<input type='submit' value='Sign Up Now' class='btn btn-submit'>
 			</div>
 		</div>
 	</section>
 
-	<section id="blog">
-		<div class="container">
+	<section id='blog'>
+		<div class='container'>
 			<h2>Blog</h2>
 			<ul>
-				<li class="post">
-					<h3 class="title">Installing Magento 2 Beta</h3>
-					<p class="preview">Learn how to install the latest version of Magento in minutes!</p>
+				<li class='post'>
+					<h3 class='title'>Installing Magento 2 Beta</h3>
+					<p class='preview'>Learn how to install the latest version of Magento in minutes!</p>
 					<span>Read More</span>
 				</li>
-				<li class="post">
-					<h3 class="title">Installing Magento 1.9</h3>
-					<p class="preview">Learn how to install the latest stable version of Magento in minutes!</p>
+				<li class='post'>
+					<h3 class='title'>Installing Magento 1.9</h3>
+					<p class='preview'>Learn how to install the latest stable version of Magento in minutes!</p>
 					<span>Read More</span>
 				</li>
 			</ul>
 		</div>
 	</section>
 
-	<section id="contact">
-		<div class="container">
+	<section id='contact'>
+		<div class='container'>
 			<h2>Contact</h2>
-			<form action="">
-				<div class="left">
-					<div class="group">
-						<input type="text" name="name" required>
-						<span class="highlight"></span>
-						<span class="bar"></span>
+			<form action=''>
+				<div class='left'>
+					<div class='group'>
+						<input type='text' name='name' required>
+						<span class='highlight'></span>
+						<span class='bar'></span>
 						<label>your name</label>
 					</div>
-						<div class="group">
-						<input type="text" name="email" required>
-						<span class="highlight"></span>
-						<span class="bar"></span>
+						<div class='group'>
+						<input type='text' name='email' required>
+						<span class='highlight'></span>
+						<span class='bar'></span>
 						<label>your email</label>
 					</div>
-					<div class="group">
-						<input type="text" name="phone" required>
-						<span class="highlight"></span>
-						<span class="bar"></span>
+					<div class='group'>
+						<input type='text' name='phone' required>
+						<span class='highlight'></span>
+						<span class='bar'></span>
 						<label>your phone</label>
 					</div>
 				</div>
-				<div class="right">
-					<div class="group">
+				<div class='right'>
+					<div class='group'>
 						<textarea required></textarea>
-						<span class="highlight"></span>
+						<span class='highlight'></span>
 						<label>your message</label>
 					</div>
-					<div class="group" style="margin-top:174px;">
-						<input type="submit" value="Send Message" class="btn btn-submit"></input>
+					<div class='group' style='margin-top:174px;'>
+						<input type='submit' value='Send Message' class='btn btn-submit'></input>
 					</div>
 				</div>
 			</form>
@@ -133,10 +139,10 @@
 	</section>
 
 	<footer>
-		<div class="container">
-			<small class="white-secondary">Copyright 2015, Travis Waelbroeck. All Rights Reserved.</small>
+		<div class='container'>
+			<small class='white-secondary'>Copyright 2015, Travis Waelbroeck. All Rights Reserved.</small>
 		</div>
 	</footer>
-	<script type="text/javascript" src="js/script.js"></script>
+	<script type='text/javascript' src='js/script.js'></script>
 </body>
 </html>
