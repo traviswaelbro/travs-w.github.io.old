@@ -1,28 +1,43 @@
 @font-face {
-	font-family: "Code Free";
-	src: url("../fonts/CODE-Light.otf");
+	font-family: 'Code Free';
+	src: url('../fonts/CODE-Light.otf');
 }
 
 @font-face {
-	font-family: "Code Free Bold";
-	src: url("../fonts/CODE-Bold.otf");
+	font-family: 'Code Free Bold';
+	src: url('../fonts/CODE-Bold.otf');
 }
 
 @font-face {
-	font-family: "Pier";
-	src: url("../fonts/pier.otf");
+	font-family: 'Pier';
+	src: url('../fonts/pier.otf');
 }
 
 @font-face {
-	font-family: "Spartan";
-	src: url("../fonts/LeagueSpartan-Bold.otf");
+	font-family: 'Spartan';
+	src: url('../fonts/LeagueSpartan-Bold.otf');
 }
 
 html, body {
 	height: 95%;
-	margin :0;
-	padding :0;
+	margin: 0;
+	padding: 0;
 	position: relative;
+}
+
+li {
+	font-family: Pier;
+  list-style-type: none;
+}
+
+a {
+	font-family: 'Code Free Bold';
+  letter-spacing: 2px;
+}
+
+small {
+	font-family: 'Code Free Bold';
+  letter-spacing: 2px;
 }
 
 section {
@@ -33,7 +48,22 @@ section {
 	padding: 0;
 
 	height: 100%;
+	max-width: 100%;
 	width: 100%;
+}
+
+#portfolio, #subscribe, #blog, #contact {
+	height: auto;
+	padding: 0 0 20em 0;
+}
+
+footer {
+	background-color: #333;
+	padding: 0 0 5em 0;
+}
+
+footer .container {
+	padding: 2em 0 0;
 }
 
 img {
@@ -41,16 +71,35 @@ img {
 }
 
 h1 {
-	font-family: "Pier";
+	font-family: 'Pier';
   font-size: 5em;
   text-transform: uppercase;
 }
 
 h2 {
-	font-family: "Code Free Bold";
+	font-family: 'Code Free Bold';
 	font-size: 2em;
 	letter-spacing: 2px;
 	text-transform: uppercase;
+}
+
+h3 {
+	font-family: 'Pier';
+	font-size: 1.5em;
+	margin: 0.5em 0;
+}
+
+h4 {
+	font-family: 'Pier';
+	text-align: justify;
+}
+
+p {
+	font-family: 'Pier';
+}
+
+span {
+	font-family: 'Pier';
 }
 
 .black {
@@ -93,13 +142,18 @@ nav > ul > li > a {
 	vertical-align: middle;
 }
 
+.btn-submit {
+	margin-top: 45px;
+	width: 315px;
+}
+
 .btn-contact {
   letter-spacing: 2px;
   text-align: center;
   text-transform: uppercase;
 
   font-size: 1.25em;
-  font-family: "Pier";
+  font-family: 'Pier';
   
   margin: 0 0.25em;
   padding: 14px 16px 13px 16px;
@@ -125,6 +179,10 @@ nav > ul > li > a {
 	width: 1240px;
 }
 
+/**
+ * Top Section & Navigation
+ */
+
 #top {
 	background: url('../images/city.jpg') no-repeat center center fixed;
 	-webkit-background-size: cover;
@@ -143,14 +201,13 @@ nav {
 }
 
 nav ul > li {
-	list-style-type: none;
 	margin: 0 2em;
 	padding: 10px;
 	transition: 0.5s ease;
 }
 
 nav > ul > li > a {
-	font-family: "Code Free";
+	font-family: 'Code Free';
 	font-size: 1.5em;
 	text-decoration: none;
 	transition: 0.5s ease;
@@ -168,9 +225,22 @@ nav > ul > li > a {
 .nav-fixed ul {
 	display: table-cell;
 	height: 100%;
-	margin: 0;
 	transition: 0.5s ease;
 	vertical-align: middle;
+}
+
+.nav-fixed-top {
+	position: fixed;
+	width: 100%;
+}
+
+.nav-fixed-top ul {
+	text-align: center;
+	width: 100%;
+}
+
+.nav-fixed-top ul li {
+	display: inline-block;
 }
 
 .billboard {
@@ -186,6 +256,169 @@ nav > ul > li > a {
   margin: 0.5em 0;
 }
 
-.left {display:inline-block; width: 35%;}
-.middle {display:inline-block; width: 25%;}
-.right {display:inline-block; width: 40%;}
+/**
+ * End Top Section
+ */
+
+
+/**
+ * About Section
+ */
+#about {
+	height: auto;
+	margin: 0 0 10em 0;
+}
+
+.quote {
+	font-family: 'Code Free Bold';
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.left {display:inline-block; width: 35%;margin: 0; padding: 0;}
+.middle {display:inline-block; width: 25%; vertical-align: top;margin: 0; padding: 0;}
+.right {display:inline-block; width: 39%; vertical-align: top;margin: 0; padding: 0;}
+
+.middle h4 {
+	margin-top: 1em;
+	padding-left: 2em;
+}
+
+/**
+ * End About Section
+ */
+
+/**
+ * Blog
+ */
+#blog {
+	padding-bottom: 5em;
+}
+
+li.post {
+	margin: 2em 0;
+}
+
+
+
+/**
+ * Contact
+ */
+#contact {
+	padding-bottom: 30em;
+}
+
+/* form styling */
+.group {
+	position: relative;
+	margin-bottom: 45px;
+}
+
+input, textarea {
+	display: block;
+	border: none;
+	border-bottom: 1px solid #757575;
+	font-size: 18px;
+	padding: 10px 10px 10px 5px;
+	width: 300px;
+}
+
+input:focus, textarea:focus {
+	outline: none;
+}
+
+/* label styling */
+label, textarea {
+	color: #999;
+	left: 5px;
+	font-size: 18px;
+	font-weight: normal;
+	position: absolute;
+	pointer-events: none;
+	top: 10px;
+	transition: 0.2s ease all;
+}
+
+textarea {
+	height: 97px;
+	pointer-events: all;
+}
+
+textarea:focus {
+	border-bottom: #5264AE 2px solid;
+}
+
+input:focus ~ label, input:valid ~ label,
+textarea:focus ~ label, textarea:valid ~ label {
+	color: #5264AE;
+	font-size: 14px;
+	top: -20px;
+}
+
+/* input bottom bars */
+.bar {
+	display: block;
+	position: relative;
+	width: 315px;
+}
+
+.bar:before, .bar:after {
+	background: #5264AE;
+	bottom: 1px;
+	content: '';
+	height: 2px;
+	position: absolute;
+	transition: 0.2s ease all;
+	width: 0;
+}
+
+.bar:before {
+	left: 50%;
+}
+
+.bar:after {
+	right: 50%;
+}
+
+input:focus ~ .bar:before, input:focus ~ .bar:after,
+textarea:focus ~ .bar:before, textarea:focus ~ .bar:after {
+	width: 50%;
+}
+
+/* highlighting */
+.highlight {
+	height: 60%;
+	left: 0;
+	pointer-events: none;
+	position: absolute;
+	opacity: 0.5;
+	top: 25%;
+	width: 100px;
+}
+
+/* active state */
+input:focus ~ .highlight, textarea:focus ~ .highlight {
+	animation:inputHighlighter 0.3s ease;
+}
+
+input:focus ~ label, input:valid ~ label,
+textarea:focus ~ label, textarea:valid ~ label {
+	color: #5254AE;
+	font-size: 14px;
+	top: -20px;
+}
+
+/* animation */
+@keyframes inputHighlighter {
+	from 	{ background: #5264AE; }
+	to 		{ background: transparent; width: 0; }
+}
+
+/**
+ * Media Queries
+ */
+@media(max-width: 1100px) {
+	.container {
+		width: 90%;
+	}
+}

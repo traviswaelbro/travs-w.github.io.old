@@ -1,4 +1,33 @@
 /**
+ * After position is more than halfway down the top div, 
+ * the nav will animate to left-fixed. Reverts after 
+ * returning towards the top of the page.
+ */
+window.onscroll = function() {
+	if(window.innerWidth > 1800) {
+		if(pageYOffset > (document.getElementById("top").clientHeight / 2.5) ) {
+			if(document.getElementById("nav").className != "nav-fixed") {
+				document.getElementById("nav").className = "nav-fixed";
+			}
+		} else {
+			if(document.getElementById("nav").className != "nav valign-child") {
+				document.getElementById("nav").className = "nav valign-child";
+			}
+		}
+	} else {
+		if(pageYOffset > (document.getElementById("top").clientHeight / 2.5) ) {
+			if(document.getElementById("nav").className != "nav-fixed-top") {
+				document.getElementById("nav").className = "nav-fixed-top";
+			}
+		} else {
+			if(document.getElementById("nav").className != "nav valign-child") {
+				document.getElementById("nav").className = "nav valign-child";
+			}
+		}
+	}
+};
+/**
+
  * Smooth Scroll
  * Credit to StackExchange user Flambino
  * src: http://codereview.stackexchange.com/a/13118/67138
@@ -32,20 +61,3 @@ window.smoothScrollTo = (function () {
     return timer;
   };
 }());
-
-/**
- * After position is more than halfway down the top div, 
- * the nav will animate to left-fixed. Reverts after 
- * returning towards the top of the page.
- */
-window.onscroll = function() {
-	if(pageYOffset > (document.getElementById("top").clientHeight / 2) ) {
-		if(document.getElementById("nav").className != "nav-fixed") {
-			document.getElementById("nav").className = "nav-fixed";
-		}
-	} else {
-		if(document.getElementById("nav").className != "nav valign-child") {
-			document.getElementById("nav").className = "nav valign-child";
-		}
-	}
-};

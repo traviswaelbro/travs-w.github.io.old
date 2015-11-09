@@ -19,77 +19,123 @@
 		<div class="billboard valign-child">
 			<div class="">
 				<h1 class="black">Travis <br/><span>Waelbroeck</span></h1>
-				<a href="#contact" class="btn btn-contact white">Get In Touch</a>
+				<div onclick="smoothScrollTo(document.getElementById('contact').offsetTop)">
+					<a href="#contact" class="btn btn-contact white" onclick="event.preventDefault();">Get In Touch</a>
+				</div>
 			</div>
 		</div>
 	</section>
 
-	<section id="about" class="container">
-		<div class="left">
+	<section id="about">
+		<div class="container">
 			<h2>About</h2>
-			<img src="images/travis.jpg">
+			<div class="left">
+				<img src="images/travis.jpg">
+				<p class="quote">Our only limitations are the ones we put on ourselves.</p>
+			</div>
+			<div class="middle">
+				<h4>Hi, my name is Travis Waelbroeck. I do more than build websites.</h4>
+				<h4>I learn about your business and what you need, then I develop a solution that solves your problems.</h4>
+			</div>
+			<div class="right">
+				<ul class="skills">
+					<li>HTML: Building a strong foundation</li>
+					<li>CSS: Designing for your audience</li>
+					<li>JavaScript: Improving functionality and design</li>
+					<li>Magento: Custom e-commerce solutions</li>
+					<li>WordPress: Pre-built or custom designs for your ease of use</li>
+				</ul>
+			</div>
 		</div>
-		<div class="middle">
-			<h4>Hi, my name is Travis Waelbroeck. I do more than build websites. I learn about your business and what you need, then I develop a solution that solves your problems.</h4>
-		</div>
-		<div class="right">
-			<ul class="skills">
-				<li>HTML: Building a strong foundation</li>
-				<li>CSS: Designing for your audience</li>
-				<li>JavaScript: Improving functionality and design</li>
-				<li>Magento: Custom e-commerce solutions</li>
-				<li>WordPress: Pre-built or custom designs for your ease of use</li>
+	</section>
+
+	<section id="portfolio">
+		<div class="container">
+			<h2>Portfolio</h2>
+			<ul class="portfolio">
+				<li>Example 1</li>
+				<li>Example 2</li>
+				<li>Example 3</li>
 			</ul>
 		</div>
 	</section>
 
-	<section id="portfolio" class="container">
-		<h2>Portfolio</h2>
-		<ul class="portfolio">
-			<li>Example 1</li>
-			<li>Example 2</li>
-			<li>Example 3</li>
-		</ul>
-	</section>
-
-	<section id="subscribe" class="container">
-		<h2>Be one of the first to get the best - Subscribe!</h2>
-		<input type="text" name="email" placeholder="your email">
-		<input type="submit" value="Sign Up Now" class="btn btn-submit">
-	</section>
-
-	<section id="blog" class="container">
-		<h2>Blog</h2>
-		<ul>
-			<li class="post">
-				<h4 class="title">Installing Magento 2 Beta</h4>
-				<p class="preview">Learn how to install the latest version of Magento in minutes!</p>
-				<span>Read More</span>
-			</li>
-			<li class="post">
-				<h4 class="title">Installing Magento 1.9</h4>
-				<p class="preview">Learn how to install the latest stable version of Magento in minutes!</p>
-				<span>Read More</span>
-			</li>
-		</ul>
-	</section>
-
-	<section id="contact" class="container">
-		<h2>Contact</h2>
-		<form action="">
-			<input type="text" name="name" placeholder="your name">
-			<input type="text" name="email" placeholder="your email">
-			<input type="text" name="phone" placeholder="your phone">
-			<textarea placeholder="your message"></textarea>
-			<input type="submit" value="Send Message" class="btn btn-submit"></input>
-		</form>
-		<div id="footer" class="container">
-			<h5><span>Phone:</span> <a href="tel:13176503893">317-650-3893</a></h5>
-			<h5><span>Email:</span> <a href="mailto:twaelbroeck@gmail.com">twaelbroeck@gmail.com</a></h5>
-			<small>Copyright 2015, Travis Waelbroeck. All Rights Reserved.</small>
+	<section id="subscribe">
+		<div class="container">
+			<h2>Be one of the first to get the best - Subscribe!</h2>
+			<div class="group">
+				<input type="text" name="email" required>
+				<span class="highlight"></span>
+				<span class="bar"></span>
+				<label>your email</label>
+			</div>
+			<div class="group">
+				<input type="submit" value="Sign Up Now" class="btn btn-submit">
+			</div>
 		</div>
 	</section>
 
+	<section id="blog">
+		<div class="container">
+			<h2>Blog</h2>
+			<ul>
+				<li class="post">
+					<h3 class="title">Installing Magento 2 Beta</h3>
+					<p class="preview">Learn how to install the latest version of Magento in minutes!</p>
+					<span>Read More</span>
+				</li>
+				<li class="post">
+					<h3 class="title">Installing Magento 1.9</h3>
+					<p class="preview">Learn how to install the latest stable version of Magento in minutes!</p>
+					<span>Read More</span>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<section id="contact">
+		<div class="container">
+			<h2>Contact</h2>
+			<form action="">
+				<div class="left">
+					<div class="group">
+						<input type="text" name="name" required>
+						<span class="highlight"></span>
+						<span class="bar"></span>
+						<label>your name</label>
+					</div>
+						<div class="group">
+						<input type="text" name="email" required>
+						<span class="highlight"></span>
+						<span class="bar"></span>
+						<label>your email</label>
+					</div>
+					<div class="group">
+						<input type="text" name="phone" required>
+						<span class="highlight"></span>
+						<span class="bar"></span>
+						<label>your phone</label>
+					</div>
+				</div>
+				<div class="right">
+					<div class="group">
+						<textarea required></textarea>
+						<span class="highlight"></span>
+						<label>your message</label>
+					</div>
+					<div class="group" style="margin-top:174px;">
+						<input type="submit" value="Send Message" class="btn btn-submit"></input>
+					</div>
+				</div>
+			</form>
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<small class="white-secondary">Copyright 2015, Travis Waelbroeck. All Rights Reserved.</small>
+		</div>
+	</footer>
 	<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
