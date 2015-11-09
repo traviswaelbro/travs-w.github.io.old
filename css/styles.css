@@ -422,3 +422,8 @@ textarea:focus ~ label, textarea:valid ~ label {
 		width: 90%;
 	}
 }
+@media(max-width: 700px) {
+	nav > ul > li {
+		margin: 1em 0;
+	}
+}
