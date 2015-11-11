@@ -278,6 +278,7 @@ nav > ul > li > a {
 .left {display:inline-block; width: 35%;margin: 0; padding: 0;}
 .middle {display:inline-block; width: 25%; vertical-align: top;margin: 10em 0; padding: 0;}
 .right {display:inline-block; width: 39%; vertical-align: top;margin: 10em 0; padding: 0;}
+form .right {margin: 0;}
 
 .middle h4 {
 	margin-top: 1em;
