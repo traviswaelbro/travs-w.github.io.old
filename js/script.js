@@ -11,6 +11,22 @@ function loadIcon() {
 	document.getElementsByTagName("body")[0].className = "loaded";
 }
 
+function mailFormJS() {
+  var name    = document.getElementById('formName').value;
+  var email   = document.getElementById('formEmail').value;
+  var phone   = document.getElementById('formPhone').value;
+  var message = document.getElementById('formMessage').value;
+
+  var subject = "I found your site and I'd like to get in touch!";
+  var body    = message + "
+
+" + name + "
+" + phone + "
+" + email;
+
+  mailString  = "mailto:twaelbroeck@gmail.com?subject=" + subject + "&body=" + body;
+}
+
 /**
  * After position is more than halfway down the top div, 
  * the nav will animate to left-fixed. Reverts after 
@@ -39,6 +55,7 @@ window.onscroll = function() {
 		}
 	}
 };
+
 /**
 
  * Smooth Scroll
