@@ -18,7 +18,7 @@ function mailFormJS() {
   var message = document.getElementById('formMessage').value;
 
   var subject = "I found your site and I'd like to get in touch!";
-  var body    = message + "; " + name + "; " + phone + "; " + email;
+  var body    = message + ", " + name + ", " + phone + ", " + email;
 
   mailString  = "mailto:twaelbroeck@gmail.com?subject=" + subject + "&body=" + body;
   window.open(mailString);
