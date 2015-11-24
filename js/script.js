@@ -18,13 +18,10 @@ function mailFormJS() {
   var message = document.getElementById('formMessage').value;
 
   var subject = "I found your site and I'd like to get in touch!";
-  var body    = message + "
-
-" + name + "
-" + phone + "
-" + email;
+  var body    = message + "; " + name + "; " + phone + "; " + email;
 
   mailString  = "mailto:twaelbroeck@gmail.com?subject=" + subject + "&body=" + body;
+  window.open(mailString);
 }
 
 /**
@@ -36,20 +33,24 @@ window.onscroll = function() {
 	if(window.innerWidth > 1800) {
 		if(pageYOffset > (document.getElementById("top").clientHeight / 2.5) ) {
 			if(document.getElementById("nav").className != "nav-fixed") {
-				document.getElementById("nav").className = "nav-fixed";
-			}
-		} else {
-			if(document.getElementById("nav").className != "nav valign-child") {
-				document.getElementById("nav").className = "nav valign-child";
-			}
-		}
-	} else {
-		if(pageYOffset > (document.getElementById("top").clientHeight / 2.5) ) {
-			if(document.getElementById("nav").className != "nav-fixed-top") {
-				document.getElementById("nav").className = "nav-fixed-top";
-			}
-		} else {
-			if(document.getElementById("nav").className != "nav valign-child") {
+        document.getElementById("top").className = "";
+        document.getElementById("nav").className = "nav-fixed";
+      }
+    } else {
+      if(document.getElementById("nav").className != "nav valign-child") {
+        document.getElementById("top").className = "";
+        document.getElementById("nav").className = "nav valign-child";
+      }
+    }
+  } else {
+    if(pageYOffset > (document.getElementById("top").clientHeight / 2.5) ) {
+      if(document.getElementById("nav").className != "nav-fixed-top") {
+        document.getElementById("top").className = "nopaque";
+        document.getElementById("nav").className = "nav-fixed-top";
+      }
+    } else {
+      if(document.getElementById("nav").className != "nav valign-child") {
+        document.getElementById("top").className = "";
 				document.getElementById("nav").className = "nav valign-child";
 			}
 		}

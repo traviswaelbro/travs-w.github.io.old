@@ -45,7 +45,7 @@
 				<li onclick='smoothScrollTo(document.getElementById("top").offsetTop)'><a href='#top' onclick='event.preventDefault();'>Home</a></li>
 				<li onclick='smoothScrollTo(document.getElementById("about").offsetTop)'><a href='#about' onclick='event.preventDefault();'>About</a></li>
 				<li onclick='smoothScrollTo(document.getElementById("portfolio").offsetTop)'><a href='#portfolio' onclick='event.preventDefault();'>Portfolio</a></li>
-				<li onclick='smoothScrollTo(document.getElementById("blog").offsetTop)'><a href='#blog' onclick='event.preventDefault();'>Blog</a></li>
+				<!-- <li onclick='smoothScrollTo(document.getElementById("blog").offsetTop)'><a href='#blog' onclick='event.preventDefault();'>Blog</a></li> -->
 				<li onclick='smoothScrollTo(document.getElementById("contact").offsetTop)'><a href='#contact' onclick='event.preventDefault();'>Contact</a></li>
 			</ul>
 		</nav>
@@ -66,17 +66,16 @@
 				<img src='images/travis.jpg'>
 				<p class='quote'>Our only limitations are the ones we put on ourselves.</p>
 			</div>
-			<div class='middle'>
-				<h4>Hi, my name is Travis Waelbroeck. I do more than build websites.</h4>
-				<h4>I learn about your business and what you need, then I develop a solution that solves your problems.</h4>
-			</div>
 			<div class='right'>
+				<h4>Hi, my name is Travis Waelbroeck. </h4>
+				<h4>I do more than build websites.</h4>
+				<h4>I learn about your business and what you need, then I develop a solution that solves your problems.</h4>
 				<ul class='skills'>
-					<li>HTML: Building a strong foundation</li>
-					<li>CSS: Designing for your audience</li>
-					<li>JavaScript: Improving functionality and design</li>
-					<li>Magento: Custom e-commerce solutions</li>
-					<li>WordPress: Pre-built or custom designs for your ease of use</li>
+					<li><span>HTML: </span>Building a strong foundation</li>
+					<li><span>CSS: </span>Designing for your audience</li>
+					<li><span>JavaScript: </span>Improving functionality and design</li>
+					<li><span>Magento: </span>Custom e-commerce solutions</li>
+					<li><span>WordPress: </span>Pre-built or custom designs for your ease of use</li>
 				</ul>
 			</div>
 		</div>
@@ -86,14 +85,19 @@
 		<div class='container'>
 			<h2>Portfolio</h2>
 			<ul class='portfolio'>
-				<li>Example 1</li>
+				<li>
+					<a href="http://travs-w.github.io/Community-Connections">
+						Community Connections
+						<!-- <img src="images/community-connections-screenshot.png" title="Community Connections"> -->
+					</a>
+				</li>
 				<li>Example 2</li>
 				<li>Example 3</li>
 			</ul>
 		</div>
 	</section>
 
-	<section id='subscribe'>
+	<!-- <section id='subscribe'>
 		<div class='container'>
 			<h2>Be one of the first to get the best - Subscribe!</h2>
 			<div class='group'>
@@ -106,9 +110,9 @@
 				<input type='submit' value='Sign Up Now' class='btn btn-submit'>
 			</div>
 		</div>
-	</section>
+	</section> -->
 
-	<section id='blog'>
+	<!-- <section id='blog'>
 		<div class='container'>
 			<h2>Blog</h2>
 			<ul>
@@ -124,12 +128,14 @@
 				</li>
 			</ul>
 		</div>
-	</section>
+	</section> -->
 
 	<section id='contact'>
 		<div class='container'>
 			<h2>Contact</h2>
-			<form action='mailFormJS()' method='post'>
+			<p><span>Email: </span><a href="mailto:twaelbroeck@gmail.com">twaelbroeck@gmail.com</a></p>
+			<p><span>Phone: </span><a href="tel:13176503893">(317) 650-3893</a></p>
+			<!-- <form action='mailFormJS();return false;' method='post'>
 				<div class='left'>
 					<div class='group'>
 						<input type='text' id='formName' name='name' required>
@@ -160,7 +166,7 @@
 						<input type='submit' value='Send Message' class='btn btn-submit'></input>
 					</div>
 				</div>
-			</form>
+			</form> -->
 		</div>
 	</section>
 

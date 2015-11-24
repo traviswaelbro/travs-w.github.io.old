@@ -192,6 +192,8 @@ nav > ul > li > a {
   opacity: 0.8;
 }
 
+#top.nopaque, .nopaque {opacity: 1;}
+
 nav {
 	background-color: rgb(51,51,51);
 	background-color: rgba(51,51,51,0.75);
@@ -230,8 +232,10 @@ nav > ul > li > a {
 }
 
 .nav-fixed-top {
+	background-color: #444;
 	position: fixed;
 	width: 100%;
+	z-index: 1000;
 }
 
 .nav-fixed-top ul {
@@ -266,7 +270,8 @@ nav > ul > li > a {
  */
 #about {
 	height: auto;
-	margin: 0 0 10em 0;
+	margin: 0;
+	/*margin: 0 0 10em 0;*/
 }
 
 .quote {
@@ -275,14 +280,22 @@ nav > ul > li > a {
   text-align: center;
 }
 
-.left {display:inline-block; width: 35%;margin: 0; padding: 0;}
-.middle {display:inline-block; width: 25%; vertical-align: top;margin: 10em 0; padding: 0;}
-.right {display:inline-block; width: 39%; vertical-align: top;margin: 10em 0; padding: 0;}
-form .right {margin: 0;}
+.left {  display:inline-block; width: 35%; margin: 0; padding: 0;}
+.middle {display:inline-block; width: 25%; margin: 5em 0; padding: 0; vertical-align: top;}
+.right { display:inline-block; width: 59%; margin: 3em 0; padding: 2em; vertical-align: top;}
+
+.right ul {padding: 0;}
+
+form .right {margin: 0; padding: 0; width: 39%;}
 
 .middle h4 {
 	margin-top: 1em;
 	padding-left: 2em;
+}
+
+.skills span {
+	display: inline-block;
+	min-width: 7em;
 }
 
 /**
@@ -305,8 +318,14 @@ li.post {
 /**
  * Contact
  */
-#contact {
-	padding-bottom: 30em;
+#contact, #subscribe, #portfolio, #about {
+	padding-bottom: 10em;
+	/*padding-bottom: 30em;*/
+}
+
+#contact p span {
+	display: inline-block;
+	width: 5em;
 }
 
 /* form styling */
