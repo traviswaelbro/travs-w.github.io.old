@@ -18,6 +18,21 @@
 	src: url('../fonts/LeagueSpartan-Bold.otf');
 }
 
+@font-face {
+	font-family: 'TypeWriter';
+	src: url('../fonts/Hand TypeWriter.ttf');
+}
+
+@font-face {
+	font-family: 'Penelope';
+	src: url('../fonts/Penelope Anne.ttf');
+}
+
+@font-face {
+	font-family: 'Basic Title';
+	src: url('../fonts/basictitlefont.ttf');
+}
+
 html, body {
 	height: 95%;
 	margin: 0;
@@ -26,7 +41,6 @@ html, body {
 }
 
 li {
-	font-family: Pier;
   list-style-type: none;
 }
 
@@ -71,14 +85,19 @@ img {
 }
 
 h1 {
-	font-family: 'Pier';
+	color: #fff;
+  font-family: 'Pier';
   font-size: 5em;
   text-transform: uppercase;
+  text-shadow: 4px 2px 8px #2eb7b8;
+  opacity: 0.95;
 }
 
 h2 {
-	font-family: 'Code Free Bold';
+	color: #2eb7b8;
+	font-family: 'Pier';
 	font-size: 2em;
+	font-weight: 600;
 	letter-spacing: 2px;
 	text-transform: uppercase;
 }
@@ -90,7 +109,10 @@ h3 {
 }
 
 h4 {
-	font-family: 'Pier';
+	font-family: 'Basic Title';
+	font-size: 1.5em;
+	font-weight: 600;
+	margin: 1em 0;
 	text-align: justify;
 }
 
@@ -275,8 +297,8 @@ nav > ul > li > a {
 }
 
 .quote {
-	font-family: 'Code Free Bold';
-  font-size: 1.5em;
+	font-family: 'TypeWriter';
+  font-size: 1.25em;
   text-align: center;
 }
 
@@ -293,9 +315,15 @@ form .right {margin: 0; padding: 0; width: 39%;}
 	padding-left: 2em;
 }
 
+.skills li,
+.skills span {
+	font-family: "Basic Title", sans-serif;
+  font-size: 1.25em;
+}
+
 .skills span {
 	display: inline-block;
-	min-width: 7em;
+	min-width: 6em;
 }
 
 /**
@@ -321,6 +349,14 @@ li.post {
 #contact, #subscribe, #portfolio, #about {
 	padding-bottom: 10em;
 	/*padding-bottom: 30em;*/
+}
+
+#portfolio {
+	background-color: #ccffff;
+}
+
+.portfolio {
+	padding: 0;
 }
 
 #contact p span {
