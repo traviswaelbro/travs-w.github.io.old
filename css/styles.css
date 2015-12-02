@@ -359,6 +359,10 @@ li.post {
 	padding: 0;
 }
 
+.portfolio li {
+	margin: 1em 0;
+}
+
 #contact p span {
 	display: inline-block;
 	width: 5em;
